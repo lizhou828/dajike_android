@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JikeShop</string>
+    <string name="type_username">Type your username here</string>
+    <string name="type_password">Type your password here</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget your password?</string>
+    <string name="back">Back</string>
+    <string name="register">Register</string>
+    <string name="to_login">To login?</string>
+</resources>
