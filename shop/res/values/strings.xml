@@ -8,4 +8,7 @@
     <string name="back">Back</string>
     <string name="register">Register</string>
     <string name="to_login">To login?</string>
+    <string name="have_account">Have a account?</string>
+    <string name="confirm_password">Confirm your password</string>
+    <string name="register_success">Register successful!</string>
 </resources>

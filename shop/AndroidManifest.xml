@@ -13,5 +13,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" android:theme="@style/login_head"></activity>
+        <activity android:name=".RegisterActivity" android:theme="@style/login_head"></activity>
+        <activity android:name=".PortalActivity"></activity>
+
     </application>
 </manifest>

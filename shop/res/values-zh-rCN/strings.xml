@@ -5,7 +5,10 @@
     <string name="type_password">请输入密码</string>
     <string name="login">登录</string>
     <string name="forget_password">忘记密码?</string>
-    <string name="back">返回</string>
+    <string name="back"> 返回首页</string>
     <string name="register">注册</string>
     <string name="to_login">去登录</string>
+    <string name="have_account">已经有账户,去登录</string>
+    <string name="confirm_password">请确认密码</string>
+    <string name="register_success">注册成功！</string>
 </resources>

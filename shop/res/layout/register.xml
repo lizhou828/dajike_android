@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!-->-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/register_page"
+        android:background="#f8f8f8"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText android:id="@+id/register_username"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_margin="10dp"
+            android:hint="@string/type_username"/>
+
+        <EditText android:id="@+id/register_password_1"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_margin="10dp"
+            android:password="true"
+            android:layout_below="@id/register_username"
+            android:hint="@string/type_password"/>
+
+        <EditText android:id="@+id/register_password_2"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:password="true"
+            android:layout_margin="10dp"
+            android:layout_below="@id/register_password_1"
+            android:hint="@string/confirm_password"/>
+
+        <Button android:id="@+id/register_button"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/register_password_2"
+            android:text="@string/register"
+            style="@style/login_button"
+
+            />
+
+        <TextView android:id="@+id/have_account"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/register_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/have_account"
+            />
+    </RelativeLayout>
+<!--</ScrollView>-->

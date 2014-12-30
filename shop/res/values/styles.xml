@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="login_button">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_below">@id/login_password</item>
         <item name="android:background">#f0f0f0</item>
@@ -10,7 +8,7 @@
         <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingTop">5dp</item>
         <item name="android:textSize">18dp</item>
-        <item name="android:radius">5dp</item>
+        <item name="android:radius">10dp</item>
     </style>
 
 
@@ -21,4 +19,5 @@
     <style name="LoginHeaderTitleBackground">
         <item name="android:background">#FFEB0000</item>
     </style>
+
 </resources>
