@@ -81,8 +81,9 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
 
                 Boolean registerSuccess = register(username,password1);
                 if(registerSuccess){
-                    startActivity( new Intent(RegisterActivity.this,PortalActivity.class));
-                    Toast.makeText(this,"注册成功!",Toast.LENGTH_SHORT).show();
+                    Intent intent =new Intent(RegisterActivity.this,PortalActivity.class);
+                    intent.putExtra("msg","注册成功!");
+                    startActivity( intent );
                 }else{
                     Toast.makeText(this,"注册失败!",Toast.LENGTH_SHORT).show();
                 }

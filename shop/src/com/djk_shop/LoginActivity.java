@@ -1,6 +1,7 @@
 package com.djk_shop;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -53,8 +54,14 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     UserService userService = new UserService(LoginActivity.this);
                     Boolean flag =  userService.login(username, password);
                     if(flag){
-                        startActivity( new Intent(LoginActivity.this,PortalActivity.class));
-                        Toast.makeText(this,"登录成功!",Toast.LENGTH_SHORT).show();
+                        //保存用户信息到MyApplication中
+                        MyApplication myApplication = (MyApplication) this.getApplication();
+                        myApplication.getData().put("user_name",username);
+
+
+                        Intent intent = new Intent(LoginActivity.this,PortalActivity.class);
+                        intent.putExtra("msg","登录成功!");
+                        startActivity(intent);
                     }
                 }
                 break;

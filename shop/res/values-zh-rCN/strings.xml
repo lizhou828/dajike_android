@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">集客小店</string>
+    <string name="app_name">商城App</string>
     <string name="type_username">请输入用户名</string>
     <string name="type_password">请输入密码</string>
     <string name="login">登录</string>
@@ -11,4 +11,10 @@
     <string name="have_account">已经有账户,去登录</string>
     <string name="confirm_password">请确认密码</string>
     <string name="register_success">注册成功！</string>
+
+    <string name="main_news">消息</string>
+    <string name="main_home">首页</string>
+    <string name="more">更多</string>
+    <string name="main_manage_date">时间</string>
+    <string name="main_friends">好友</string>
 </resources>

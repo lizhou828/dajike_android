@@ -29,9 +29,10 @@ public class UserService {
         if( cursor.moveToFirst() ){
             cursor.close();
             return true;
+        }else{
+            cursor.close();
+            return  false;
         }
-        return  false;
-
     }
 
     //注册逻辑
@@ -54,8 +55,12 @@ public class UserService {
         }
         String sql = "select * from user where user_name=?";
         Cursor cursor = databaseRead.rawQuery(sql, new String[]{username});
-        if( cursor.moveToFirst() )  return true;
-        cursor.close();
-        return  false;
+        if( cursor.moveToFirst() ){
+            cursor.close();
+            return true;
+        }else{
+            cursor.close();
+            return  false;
+        }
     }
 }

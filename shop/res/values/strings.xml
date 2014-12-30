@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">JikeShop</string>
+    <string name="app_name">ShopApp</string>
     <string name="type_username">Type your username here</string>
     <string name="type_password">Type your password here</string>
     <string name="login">Login</string>
@@ -11,4 +11,10 @@
     <string name="have_account">Have a account?</string>
     <string name="confirm_password">Confirm your password</string>
     <string name="register_success">Register successful!</string>
+
+    <string name="main_news">Message</string>
+    <string name="main_home">Portal</string>
+    <string name="more">More</string>
+    <string name="main_manage_date">Time</string>
+    <string name="main_friends">Friends</string>
 </resources>
