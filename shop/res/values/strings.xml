@@ -18,4 +18,5 @@
     <string name="main_manage_date">Time</string>
     <string name="main_friends">Friends</string>
     <string name="main_account">Account</string>
+    <string name="main_usercenter">UserCenter</string>
 </resources>

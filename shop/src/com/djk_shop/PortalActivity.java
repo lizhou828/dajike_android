@@ -40,7 +40,7 @@ public class PortalActivity extends TabActivity implements CompoundButton.OnChec
         this.mAIntent = new Intent(this,AActivity.class);
         this.mBIntent = new Intent(this,BActivity.class);
         this.mCIntent = new Intent(this,CActivity.class);
-        this.mDIntent = new Intent(this,DActivity.class);
+        this.mDIntent = new Intent(this,UserCenterActivity.class);
         this.mEIntent = new Intent(this,EActivity.class);
 
         ((RadioButton) findViewById(R.id.radio_button0))

@@ -18,4 +18,5 @@
     <string name="main_manage_date">时间</string>
     <string name="main_friends">好友</string>
     <string name="main_account">账号管理</string>
+    <string name="main_usercenter">会员中心</string>
 </resources>

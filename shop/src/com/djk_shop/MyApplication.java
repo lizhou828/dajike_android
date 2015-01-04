@@ -11,8 +11,10 @@ import java.util.Map;
  * 只需要调用Context的 getApplicationContext或者Activity的getApplication方法来获得一个application对象
  */
 public class MyApplication extends Application {
+
     //用于在Activity之间传递复杂类型的参数
     private Map<String ,Object> data;
+
     private Map<String ,Object> cache;
 
     //安卓应用启动真正的入口点。
