@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.djk_shop.dao.DBHelper;
 import com.djk_shop.modules.User;
+import com.djk_shop.utils.StringUtils;
 
 /**
  * Created by Administrator on 2014/12/26.
@@ -24,6 +25,9 @@ public class UserService {
     }
 
     public  Boolean login(String username, String password) {
+        if(StringUtils.isBlank(username )  || StringUtils.isBlank(password) ){
+            return false;
+        }
         String sql = "select * from user where user_name=? and password=?";
         Cursor cursor = databaseRead.rawQuery(sql, new String[]{username, password});
         if( cursor.moveToFirst() ){
