@@ -31,10 +31,10 @@ public class UserService {
         String sql = "select * from user where user_name=? and password=?";
         Cursor cursor = databaseRead.rawQuery(sql, new String[]{username, password});
         if( cursor.moveToFirst() ){
-            cursor.close();
+            if( !cursor.isClosed()) cursor.close();
             return true;
         }else{
-            cursor.close();
+            if( !cursor.isClosed()) cursor.close();
             return  false;
         }
     }
@@ -60,10 +60,10 @@ public class UserService {
         String sql = "select * from user where user_name=?";
         Cursor cursor = databaseRead.rawQuery(sql, new String[]{username});
         if( cursor.moveToFirst() ){
-            cursor.close();
+            if( !cursor.isClosed()) cursor.close();
             return true;
         }else{
-            cursor.close();
+            if( !cursor.isClosed()) cursor.close();
             return  false;
         }
     }

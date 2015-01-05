@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -14,13 +15,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.djk_shop.dao.ormlite.DBHelper;
+import com.djk_shop.modules.User;
 import com.djk_shop.services.UserService;
 import com.djk_shop.utils.StringUtils;
+import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.j256.ormlite.dao.Dao;
+
+import java.sql.SQLException;
 
 /**
  * Created by Administrator on 2014/12/26.
  */
-public class LoginActivity extends Activity implements View.OnClickListener{
+public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View.OnClickListener{
     private Button loginButton;
     private String username;
     private String password;
@@ -28,7 +35,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private EditText passwordEditText;
     private TextView registerTextView;
     private boolean PASSWORD = false;
-    private  boolean USER_NAME = false;
+    private boolean USER_NAME = false;
+    private Dao<User, Integer> userDao;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,8 +125,9 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             case R.id.login_button :
                 if( USER_NAME && PASSWORD ) {
 
-                    UserService userService = new UserService(LoginActivity.this);
-                    Boolean flag =  userService.login(username, password);
+//                    UserService userService = new UserService(LoginActivity.this);
+//                    Boolean flag =  userService.login(username, password);
+                    Boolean flag =  login(username, password);
                     if(flag){
                         //保存用户信息到MyApplication中
                         MyApplication myApplication = (MyApplication) this.getApplication();
@@ -143,6 +154,24 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         }
     }
 
-
+    public  Boolean login(String username, String password) {
+        if(StringUtils.isBlank(username)  || StringUtils.isBlank(password) ){
+            return false;
+        }
+        String sql = "select * from user where user_name=? and password=?";
+        try {
+            userDao = getHelper().getUserDao();
+            User user = userDao.queryBuilder().where().eq("user_name",username).and().eq("password",password).queryForFirst();
+            if( user != null ){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Log.e(this.getClass().getName(), "Login failed!", e);
+            return false;
+        }
+    }
 
 }
