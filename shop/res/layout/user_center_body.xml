@@ -1,6 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@drawable/user_center_item_border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/t_1"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="买到的商品"
+                android:textSize="21dp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=">"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/user_center_item_border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/t_2"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="卖出的商品"
+                android:textSize="21dp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=">"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/user_center_item_border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/t_3"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="结算中心"
+                android:textSize="21dp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=">"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/user_center_item_border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/t_5_1"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="银行卡管理"
+                android:textColor="@android:color/black"
+                android:textSize="21dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=">"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/user_center_item_border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/t_5"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="地址管理"
+                android:textColor="@android:color/black"
+                android:textSize="21dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=">"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/user_center_item_border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/t_6"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="手机号码"
+                android:textSize="21dp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=">"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/user_center_item_border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/t_7"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="安全中心"
+                android:textSize="21dp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=">"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:background="#c40000"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="退出登录"
+                android:textSize="21dp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

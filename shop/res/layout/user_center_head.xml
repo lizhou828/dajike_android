@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/user_center_head"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="100dp">
 
     <ImageView
+        android:layout_marginLeft="10dp"
         android:id="@+id/user_center_image"
-        android:layout_marginLeft="20dp"
-        android:layout_alignParentLeft="true"
         android:src="@drawable/portal"
         android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_height="fill_parent" />
 
     <RelativeLayout
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="140dp"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp">
+        android:layout_marginLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
         <TextView
             android:text="admin"
             android:layout_marginTop="10dp"
+            android:textColor="#666666"
             android:id="@+id/user_center_nickname"
             android:layout_width="wrap_content"
             android:layout_alignParentLeft="true"
@@ -31,50 +34,57 @@
             android:layout_below="@id/user_center_nickname"
             android:background="@drawable/table_frame_gray"
             android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_height="50dp">
 
             <TableLayout
 
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
-                <TableRow>
+                <TableRow >
                     <TextView
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
+                        android:textColor="#666666"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="账户余额"/>
                     <TextView
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
+                        android:textColor="#666666"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="积分"/>
                     <TextView
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
+                        android:textColor="#666666"
                         android:layout_marginRight="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="收益"/>
                 </TableRow>
-                <TableRow>
+                <TableRow >
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#c40000"
+                        android:text="￥151215"/>
                     <TextView
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="￥:151215"/>
-                    <TextView
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:textColor="#c40000"
                         android:text="1235"/>
                     <TextView
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
+                        android:textColor="#c40000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="235"/>
@@ -86,4 +96,4 @@
 
 
     </RelativeLayout>
-</RelativeLayout>
+</LinearLayout>

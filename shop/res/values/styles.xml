@@ -37,4 +37,7 @@
         <item name="android:layout_weight">1.0</item>
     </style>
 
+    <style name="user_center_item_border">
+
+    </style>
 </resources>
