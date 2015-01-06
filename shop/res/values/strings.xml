@@ -19,4 +19,6 @@
     <string name="main_friends">Friends</string>
     <string name="main_account">Account</string>
     <string name="main_usercenter">UserCenter</string>
+    <string name="shop_cart">ShopCarts</string>
+    <string name="mobile_and_app_info">Show Mobile and app info</string>
 </resources>

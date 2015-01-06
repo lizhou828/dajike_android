@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MyActivity extends Activity implements View.OnClickListener{
 
@@ -26,6 +27,7 @@ public class MyActivity extends Activity implements View.OnClickListener{
             }
         }
     };
+    private Button mobileAndAppInfo;
 
     /**
      * Called when the activity is first created.
@@ -36,10 +38,13 @@ public class MyActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.main);
         initViews();
         loginButton.setOnClickListener(this);
+        mobileAndAppInfo.setOnClickListener(this);
+
     }
 
     private void initViews() {
         loginButton = (Button)findViewById(R.id.login_page_button);
+        mobileAndAppInfo = (Button)findViewById(R.id.mobile_and_app_info_button);
     }
 
     @Override
@@ -48,6 +53,8 @@ public class MyActivity extends Activity implements View.OnClickListener{
             case R.id.login_page_button :
                 startActivity( new Intent(MyActivity.this,LoginActivity.class));
                 break;
+            case R.id.mobile_and_app_info_button :
+                startActivity( new Intent(MyActivity.this,MobileAppInfoActivity.class));
             default:break;
         }
     }
