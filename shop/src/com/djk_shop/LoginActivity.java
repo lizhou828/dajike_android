@@ -38,11 +38,13 @@ public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View
     private boolean USER_NAME = false;
     private Dao<User, Integer> userDao;
 
+    static LoginActivity instance;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance = this;
         requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setContentView(R.layout.login);
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.login_head);
@@ -50,6 +52,9 @@ public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View
         initViews();
         loginButton.setOnClickListener(this);
         registerTextView.setOnClickListener(this);
+
+        instance = this;
+        if( PortalActivity.instance != null) PortalActivity.instance.finish();
     }
 
     private void initViews() {
@@ -136,6 +141,7 @@ public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View
                         Intent intent = new Intent(LoginActivity.this,PortalActivity.class);
                         intent.putExtra("msg","登录成功!");
                         startActivity(intent);
+                        finish();
                     }else{
                         cannotUseLoginButton();
                         Toast.makeText(this,"用户名或密码错误!",Toast.LENGTH_LONG).show();
@@ -148,6 +154,7 @@ public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View
                 break;
             case R.id.register_text_view :
                 startActivity( new Intent(LoginActivity.this,RegisterActivity.class) );
+                finish();
                 break;
             default:
                 break;

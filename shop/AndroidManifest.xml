@@ -16,14 +16,14 @@
         </activity>
 
 
-        <activity android:name=".LoginActivity" android:theme="@style/login_head"></activity>
-        <activity android:name=".RegisterActivity" android:theme="@style/login_head"></activity>
-        <activity android:name=".PortalActivity" android:theme="@style/login_head"></activity>
+        <activity android:name=".LoginActivity" android:launchMode="singleTask" android:theme="@style/login_head"></activity>
+        <activity android:name=".RegisterActivity" android:launchMode="singleTask" android:theme="@style/login_head"></activity>
+        <activity android:name=".PortalActivity" android:launchMode="singleTask" android:theme="@style/login_head"></activity>
         <activity android:name=".AActivity" android:theme="@style/login_head"></activity>
-        <activity android:name=".BActivity" android:theme="@style/login_head"></activity>
-        <activity android:name=".CActivity" android:theme="@style/login_head"></activity>
-        <activity android:name=".UserCenterActivity" android:theme="@style/login_head"></activity>
-        <activity android:name=".EActivity" android:theme="@style/login_head"></activity>
+        <activity android:name=".BActivity"  android:theme="@style/login_head"></activity>
+        <activity android:name=".CActivity"  android:theme="@style/login_head"></activity>
+        <activity android:name=".UserCenterActivity"  android:theme="@style/login_head"></activity>
+        <activity android:name=".EActivity"  android:theme="@style/login_head"></activity>
         <activity android:name=".MobileAppInfoActivity" android:theme="@style/login_head"></activity>
 
 

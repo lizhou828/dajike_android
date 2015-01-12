@@ -41,11 +41,15 @@ public class RegisterActivity extends OrmLiteBaseActivity<DBHelper> implements V
     private Dao<User, Integer> userDao;
     private Button registerButton;
 
+    static RegisterActivity instance;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setContentView(R.layout.register);
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.register_head);
@@ -56,6 +60,9 @@ public class RegisterActivity extends OrmLiteBaseActivity<DBHelper> implements V
         loginTextView.setOnClickListener(this);
         haveAccountTextView.setOnClickListener(this);
         registerButton.setOnClickListener(this);
+
+        instance = this;
+        if(PortalActivity.instance != null) PortalActivity.instance.finish();
 
     }
     private void initView() {
@@ -73,9 +80,11 @@ public class RegisterActivity extends OrmLiteBaseActivity<DBHelper> implements V
         switch (view.getId()){
             case R.id.login_text_view :
                 startActivity( new Intent(RegisterActivity.this,LoginActivity.class) );
+                finish();
                 break;
             case R.id.have_account :
                 startActivity( new Intent(RegisterActivity.this,LoginActivity.class) );
+                finish();
                 break;
             case R.id.register_button:
                 getData();
@@ -93,6 +102,8 @@ public class RegisterActivity extends OrmLiteBaseActivity<DBHelper> implements V
                     Intent intent =new Intent(RegisterActivity.this,PortalActivity.class);
                     intent.putExtra("msg","注册成功!");
                     startActivity( intent );
+                    //关闭当前Activity
+                    finish();
                 }else{
                     Toast.makeText(this,"注册失败!",Toast.LENGTH_SHORT).show();
                 }

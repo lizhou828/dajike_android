@@ -35,8 +35,10 @@
 -verbose
 # 代码优化
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
 # 过滤泛型
 -keepattributes Signature
+
 -keepattributes *Annotation*
 -renamesourcefileattribute SourceFile
 -keepattributes SourceFile,LineNumberTable

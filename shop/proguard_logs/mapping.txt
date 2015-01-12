@@ -7,21 +7,22 @@ com.djk_shop.CActivity -> com.djk_shop.CActivity:
 com.djk_shop.EActivity -> com.djk_shop.EActivity:
     18:23:void onCreate(android.os.Bundle) -> onCreate
 com.djk_shop.LoginActivity -> com.djk_shop.LoginActivity:
-    android.widget.Button loginButton -> a
-    java.lang.String username -> b
-    java.lang.String password -> c
-    android.widget.EditText usernameEditText -> d
-    android.widget.EditText passwordEditText -> e
-    android.widget.TextView registerTextView -> f
-    boolean PASSWORD -> g
-    boolean USER_NAME -> h
-    com.j256.ormlite.dao.Dao userDao -> i
-    45:53:void onCreate(android.os.Bundle) -> onCreate
-    56:107:void initViews() -> a
-    110:114:void canUseLoginButton() -> b
-    116:120:void cannotUseLoginButton() -> c
-    124:155:void onClick(android.view.View) -> onClick
-    158:173:java.lang.Boolean login(java.lang.String,java.lang.String) -> a
+    android.widget.Button loginButton -> b
+    java.lang.String username -> c
+    java.lang.String password -> d
+    android.widget.EditText usernameEditText -> e
+    android.widget.EditText passwordEditText -> f
+    android.widget.TextView registerTextView -> g
+    boolean PASSWORD -> h
+    boolean USER_NAME -> i
+    com.j256.ormlite.dao.Dao userDao -> j
+    com.djk_shop.LoginActivity instance -> a
+    46:58:void onCreate(android.os.Bundle) -> onCreate
+    61:112:void initViews() -> a
+    115:119:void canUseLoginButton() -> b
+    121:125:void cannotUseLoginButton() -> c
+    129:162:void onClick(android.view.View) -> onClick
+    165:180:java.lang.Boolean login(java.lang.String,java.lang.String) -> a
     30:30:java.lang.String access$002(com.djk_shop.LoginActivity,java.lang.String) -> a
     30:30:android.widget.EditText access$100(com.djk_shop.LoginActivity) -> a
     30:30:java.lang.String access$000(com.djk_shop.LoginActivity) -> b
@@ -36,14 +37,14 @@ com.djk_shop.LoginActivity -> com.djk_shop.LoginActivity:
     30:30:boolean access$200(com.djk_shop.LoginActivity) -> h
 com.djk_shop.LoginActivity$1 -> com.djk_shop.a:
     com.djk_shop.LoginActivity this$0 -> a
-    65:65:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
-    68:68:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
-    71:82:void afterTextChanged(android.text.Editable) -> afterTextChanged
+    70:70:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    73:73:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    76:87:void afterTextChanged(android.text.Editable) -> afterTextChanged
 com.djk_shop.LoginActivity$2 -> com.djk_shop.b:
     com.djk_shop.LoginActivity this$0 -> a
-    88:88:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
-    91:91:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
-    94:105:void afterTextChanged(android.text.Editable) -> afterTextChanged
+    93:93:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    96:96:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    99:110:void afterTextChanged(android.text.Editable) -> afterTextChanged
 com.djk_shop.MobileAppInfoActivity -> com.djk_shop.MobileAppInfoActivity:
     android.widget.TextView mobileAppText -> a
     23:73:void onCreate(android.os.Bundle) -> onCreate
@@ -67,16 +68,17 @@ com.djk_shop.MyApplication -> com.djk_shop.MyApplication:
     30:31:void onTerminate() -> onTerminate
     34:34:java.util.Map getData() -> a
 com.djk_shop.PortalActivity -> com.djk_shop.PortalActivity:
-    android.widget.TabHost mTabHost -> a
-    android.content.Intent mAIntent -> b
-    android.content.Intent mBIntent -> c
-    android.content.Intent mCIntent -> d
-    android.content.Intent mDIntent -> e
-    android.content.Intent mEIntent -> f
-    27:58:void onCreate(android.os.Bundle) -> onCreate
-    62:82:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-    85:92:void setupIntent() -> a
-    95:95:android.widget.TabHost$TabSpec buildTabSpec(java.lang.String,int,int,android.content.Intent) -> a
+    android.widget.TabHost mTabHost -> b
+    android.content.Intent mAIntent -> c
+    android.content.Intent mBIntent -> d
+    android.content.Intent mCIntent -> e
+    android.content.Intent mDIntent -> f
+    android.content.Intent mEIntent -> g
+    com.djk_shop.PortalActivity instance -> a
+    29:61:void onCreate(android.os.Bundle) -> onCreate
+    65:85:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    88:95:void setupIntent() -> a
+    98:98:android.widget.TabHost$TabSpec buildTabSpec(java.lang.String,int,int,android.content.Intent) -> a
 com.djk_shop.R -> com.djk_shop.R:
 com.djk_shop.R$attr -> com.djk_shop.R$attr:
 com.djk_shop.R$color -> com.djk_shop.R$color:
@@ -209,23 +211,24 @@ com.djk_shop.R$style -> com.djk_shop.R$style:
     int main_tab_bottom -> main_tab_bottom
     int user_center_item_border -> user_center_item_border
 com.djk_shop.RegisterActivity -> com.djk_shop.RegisterActivity:
-    android.widget.TextView loginTextView -> a
-    android.widget.TextView haveAccountTextView -> b
-    android.widget.TextView passwordTextView1 -> c
-    android.widget.TextView passwordTextView2 -> d
-    android.widget.TextView usernameTextView -> e
-    java.lang.String username -> f
-    java.lang.String password1 -> g
-    java.lang.String password2 -> h
-    com.j256.ormlite.dao.Dao userDao -> i
-    android.widget.Button registerButton -> j
-    48:60:void onCreate(android.os.Bundle) -> onCreate
-    62:69:void initView() -> a
-    73:102:void onClick(android.view.View) -> onClick
-    105:119:boolean checkData() -> b
-    127:131:void getData() -> c
-    135:145:boolean register(java.lang.String,java.lang.String) -> a
-    150:164:boolean userExists(java.lang.String) -> a
+    android.widget.TextView loginTextView -> b
+    android.widget.TextView haveAccountTextView -> c
+    android.widget.TextView passwordTextView1 -> d
+    android.widget.TextView passwordTextView2 -> e
+    android.widget.TextView usernameTextView -> f
+    java.lang.String username -> g
+    java.lang.String password1 -> h
+    java.lang.String password2 -> i
+    com.j256.ormlite.dao.Dao userDao -> j
+    android.widget.Button registerButton -> k
+    com.djk_shop.RegisterActivity instance -> a
+    49:67:void onCreate(android.os.Bundle) -> onCreate
+    69:76:void initView() -> a
+    80:113:void onClick(android.view.View) -> onClick
+    116:130:boolean checkData() -> b
+    138:142:void getData() -> c
+    146:156:boolean register(java.lang.String,java.lang.String) -> a
+    161:175:boolean userExists(java.lang.String) -> a
 com.djk_shop.UserCenterActivity -> com.djk_shop.UserCenterActivity:
     18:25:void onCreate(android.os.Bundle) -> onCreate
 com.djk_shop.dao.ormlite.DBHelper -> com.djk_shop.dao.ormlite.DBHelper:

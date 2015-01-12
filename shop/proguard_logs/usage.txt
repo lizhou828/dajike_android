@@ -7,7 +7,7 @@ com.djk_shop.R:
     10:142:public R()
 com.djk_shop.RegisterActivity:
     private com.djk_shop.services.ormlite.UserService userService
-    169:184:public java.lang.Boolean login(java.lang.String,java.lang.String)
+    180:195:public java.lang.Boolean login(java.lang.String,java.lang.String)
 com.djk_shop.dao.DBHelper
 com.djk_shop.dao.ormlite.DBHelper:
     private static final java.lang.String DATABASE_NAME
