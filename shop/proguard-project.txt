@@ -18,3 +18,137 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+
+
+
+#设置混淆的压缩比率 0 ~ 7
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+#如果应用程序引入的有jar包,并且想混淆jar包里面的class
+-dontskipnonpubliclibraryclasses
+#混淆后生产映射文件 map 类名->转化后类名的映射
+-dontpreverify
+#加上这几句话，不然混淆时，会在控制台中报warning警告
+-ignorewarnings
+-verbose
+# 代码优化
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+# 过滤泛型
+-keepattributes Signature
+-keepattributes *Annotation*
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable
+
+#添加不需要混的第三方的jar包
+#-libraryjars libs/android-zltd-v1.jar
+#-libraryjars libs/commons-net-3.2.jar
+#-libraryjars libs/gson-2.2.1.jar
+#-libraryjars libs/android-support-v4.jar
+-libraryjars libs/ormlite-android-4.48.jar
+-libraryjars libs/ormlite-core-4.48.jar
+#-libraryjars libs/ormlite-jdbc-4.48.jar
+
+
+# 以下包 忽略警告信息
+#如非确定第三包不会被外部调用,包括其中的类被继承等等
+#可以用以下语句忽略警告
+#如果 编译打包输出成功后,却不能正确的运行或者安装
+#请取消 忽略警告 重新打包 一般都会输出错误的console信息
+-dontwarn com.j256.**
+-dontwarn com.google.**
+-dontwarn android.support.v4.**
+-dontwarn com.j256.ormlite.**
+-dontwarn com.j256.ormlite.android.**
+-dontwarn com.j256.ormlite.field.**
+-dontwarn com.j256.ormlite.stmt.**
+
+
+# OrmLite uses reflection
+-keep class com.j256.**
+-keepclassmembers class com.j256.** { *; }
+-keep enum com.j256.**
+-keepclassmembers enum com.j256.** { *; }
+-keep interface com.j256.**
+-keepclassmembers interface com.j256.** { *; }
+
+
+-keep public class * extends com.j256.ormlite.**
+-keep public class * extends com.j256.ormlite.android.**
+-keep public class * extends com.j256.ormlite.field.**
+-keep public class * extends com.j256.ormlite.stmt.**
+
+-keep public class * extends com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper
+-keep public class * extends com.j256.ormlite.android.apptools.OpenHelperManager
+
+
+#不混淆某个包所有类或某个类class、某个接口interface, 不混淆指定类则把**换成类名
+-keep class com.google.** { *; }
+-keep class com.j256.ormlite.** { *; }
+-keep class com.j256.ormlite.android.** { *; }
+-keep class com.j256.ormlite.field.** { *; }
+-keep class com.j256.ormlite.stmt.** { *; }
+
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.app.** { *; }
+-keep public class * extends android.support.v4.**
+-keep public class * extends android.app.Fragment
+
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+
+#保护指定的类和类的成员的名称，如果所有指定的类成员出席（在压缩步骤之后）
+#所有native的方法不能去混淆.
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+#不混淆指某个方法，*可换成指定的方法或类名
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+-keepclassmembers class * {
+  public <init>(android.content.Context);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+#不混淆Parcelable的子类，防止android.os.BadParcelableException
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keep class **.R$* {
+    *;
+}
+
+
+#-assumenosideeffects class_specification
+#表示：假设调用不产生任何影响，在proguard代码优化时会将该调用remove掉。如system.out.println和Log.v等等
+
+#表示Log.d和Log.v代码无副作用，在proguard时会被从源码中remove掉。
+#这样release模式(正式发布)就不会打印日志了，而debug模式(平常调试)照常打印，不用修改一点代码。大赞吧，嘿嘿*_^
+-assumenosideeffects class android.util.Log{
+    public static *** d(...);
+    public static *** v(...);
+}

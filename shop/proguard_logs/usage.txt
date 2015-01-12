@@ -1,0 +1,48 @@
+com.djk_shop.BuildConfig
+com.djk_shop.MyApplication:
+    38:39:public void setData(java.util.Map)
+    42:42:public java.util.Map getCache()
+    46:47:public void setCache(java.util.Map)
+com.djk_shop.R:
+    10:142:public R()
+com.djk_shop.RegisterActivity:
+    private com.djk_shop.services.ormlite.UserService userService
+    169:184:public java.lang.Boolean login(java.lang.String,java.lang.String)
+com.djk_shop.dao.DBHelper
+com.djk_shop.dao.ormlite.DBHelper:
+    private static final java.lang.String DATABASE_NAME
+    private static final int DATABASE_VERSION
+com.djk_shop.modules.User:
+    private static final long serialVersionUID
+    private java.lang.Integer id
+    private java.lang.String idNumber
+    private java.lang.String gender
+    private java.lang.String married
+    private java.lang.String portalImage
+    private java.lang.Integer status
+    41:47:public User(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+    49:58:public User(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+    60:63:public User(java.lang.String,java.lang.String)
+    69:69:public static long getSerialVersionUID()
+    73:73:public java.lang.Integer getId()
+    77:78:public void setId(java.lang.Integer)
+    81:81:public java.lang.String getUsername()
+    89:89:public java.lang.String getPassword()
+    97:97:public java.lang.String getIdNumber()
+    101:102:public void setIdNumber(java.lang.String)
+    105:105:public java.lang.String getGender()
+    109:110:public void setGender(java.lang.String)
+    113:113:public java.lang.String getMarried()
+    117:118:public void setMarried(java.lang.String)
+    121:121:public java.lang.String getPortalImage()
+    125:126:public void setPortalImage(java.lang.String)
+    129:129:public java.lang.Integer getStatus()
+    133:134:public void setStatus(java.lang.Integer)
+com.djk_shop.services.UserService
+com.djk_shop.services.ormlite.UserService:
+    private com.j256.ormlite.dao.Dao userDao
+    26:41:public java.lang.Boolean login(java.lang.String,java.lang.String)
+    46:56:public boolean register(java.lang.String,java.lang.String)
+    61:75:public boolean userExists(java.lang.String)
+com.djk_shop.utils.StringUtils:
+    6:6:public StringUtils()

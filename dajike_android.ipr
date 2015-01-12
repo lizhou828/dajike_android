@@ -170,6 +170,11 @@
       </item>
     </group>
   </component>
+  <component name="ProjectFileVersion">
+    <performed-conversions>
+      <converter id="android-proguard-options" />
+    </performed-conversions>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/mobile_mall/mobile_mall.iml" filepath="$PROJECT_DIR$/mobile_mall/mobile_mall.iml" />
