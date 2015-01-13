@@ -3,7 +3,9 @@ package com.djk_shop;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -40,6 +42,10 @@ public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View
 
     static LoginActivity instance;
 
+    private SharedPreferences sharedPreferences;
+    private static final String LOGIN_INFO="LOGIN_INFO";
+    private static final String USER_NAME_INFO="USER_NAME";
+    private static final String PASSWORD_INFO = "PASSWORD";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +56,7 @@ public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.login_head);
 
         initViews();
+        sharedPreferences = getSharedPreferences(LOGIN_INFO ,Activity.MODE_APPEND);
         loginButton.setOnClickListener(this);
         registerTextView.setOnClickListener(this);
 
@@ -62,6 +69,12 @@ public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View
         loginButton.setClickable(false);
         loginButton.setEnabled(false);
         registerTextView = (TextView)findViewById(R.id.register_text_view);
+
+
+        if( sharedPreferences != null ){
+            usernameEditText.setText( sharedPreferences.getString(USER_NAME_INFO,"") );
+            passwordEditText.setText( sharedPreferences.getString(PASSWORD_INFO,"") );
+        }
 
         usernameEditText = (EditText)findViewById(R.id.login_username);
         usernameEditText.addTextChangedListener(new TextWatcher() {
@@ -159,6 +172,14 @@ public class LoginActivity extends OrmLiteBaseActivity<DBHelper> implements View
             default:
                 break;
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        //save user info in sharedPreferences for auto-login next time before current activity stopped
+        sharedPreferences.edit().putString(USER_NAME_INFO,username)
+                .putString(PASSWORD_INFO,password).commit();
     }
 
     public  Boolean login(String username, String password) {

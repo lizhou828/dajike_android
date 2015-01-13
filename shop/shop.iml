@@ -4,7 +4,6 @@
     <facet type="android" name="Android">
       <configuration>
         <option name="APK_PATH" value="/../out/production/shop/shop.apk" />
-        <option name="RUN_PROGUARD" value="true" />
         <proGuardCfgFiles>
           <file>file://D:/Program Files (x86)/android-sdk_r24-windows/android-sdk-windows/tools/proguard/proguard-android.txt</file>
           <file>file://%MODULE_SDK_HOME%/tools/proguard/proguard-android.txt</file>

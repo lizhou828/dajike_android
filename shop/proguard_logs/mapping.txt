@@ -17,34 +17,36 @@ com.djk_shop.LoginActivity -> com.djk_shop.LoginActivity:
     boolean USER_NAME -> i
     com.j256.ormlite.dao.Dao userDao -> j
     com.djk_shop.LoginActivity instance -> a
-    46:58:void onCreate(android.os.Bundle) -> onCreate
-    61:112:void initViews() -> a
-    115:119:void canUseLoginButton() -> b
-    121:125:void cannotUseLoginButton() -> c
-    129:162:void onClick(android.view.View) -> onClick
-    165:180:java.lang.Boolean login(java.lang.String,java.lang.String) -> a
-    30:30:java.lang.String access$002(com.djk_shop.LoginActivity,java.lang.String) -> a
-    30:30:android.widget.EditText access$100(com.djk_shop.LoginActivity) -> a
-    30:30:java.lang.String access$000(com.djk_shop.LoginActivity) -> b
-    30:30:boolean access$202(com.djk_shop.LoginActivity,boolean) -> a
-    30:30:boolean access$300(com.djk_shop.LoginActivity) -> c
-    30:30:void access$400(com.djk_shop.LoginActivity) -> d
-    30:30:void access$500(com.djk_shop.LoginActivity) -> e
-    30:30:java.lang.String access$602(com.djk_shop.LoginActivity,java.lang.String) -> b
-    30:30:android.widget.EditText access$700(com.djk_shop.LoginActivity) -> f
-    30:30:java.lang.String access$600(com.djk_shop.LoginActivity) -> g
-    30:30:boolean access$302(com.djk_shop.LoginActivity,boolean) -> b
-    30:30:boolean access$200(com.djk_shop.LoginActivity) -> h
+    android.content.SharedPreferences sharedPreferences -> k
+    52:65:void onCreate(android.os.Bundle) -> onCreate
+    68:125:void initViews() -> a
+    128:132:void canUseLoginButton() -> b
+    134:138:void cannotUseLoginButton() -> c
+    142:175:void onClick(android.view.View) -> onClick
+    179:183:void onStop() -> onStop
+    186:201:java.lang.Boolean login(java.lang.String,java.lang.String) -> a
+    32:32:java.lang.String access$002(com.djk_shop.LoginActivity,java.lang.String) -> a
+    32:32:android.widget.EditText access$100(com.djk_shop.LoginActivity) -> a
+    32:32:java.lang.String access$000(com.djk_shop.LoginActivity) -> b
+    32:32:boolean access$202(com.djk_shop.LoginActivity,boolean) -> a
+    32:32:boolean access$300(com.djk_shop.LoginActivity) -> c
+    32:32:void access$400(com.djk_shop.LoginActivity) -> d
+    32:32:void access$500(com.djk_shop.LoginActivity) -> e
+    32:32:java.lang.String access$602(com.djk_shop.LoginActivity,java.lang.String) -> b
+    32:32:android.widget.EditText access$700(com.djk_shop.LoginActivity) -> f
+    32:32:java.lang.String access$600(com.djk_shop.LoginActivity) -> g
+    32:32:boolean access$302(com.djk_shop.LoginActivity,boolean) -> b
+    32:32:boolean access$200(com.djk_shop.LoginActivity) -> h
 com.djk_shop.LoginActivity$1 -> com.djk_shop.a:
     com.djk_shop.LoginActivity this$0 -> a
-    70:70:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
-    73:73:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
-    76:87:void afterTextChanged(android.text.Editable) -> afterTextChanged
+    83:83:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    86:86:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    89:100:void afterTextChanged(android.text.Editable) -> afterTextChanged
 com.djk_shop.LoginActivity$2 -> com.djk_shop.b:
     com.djk_shop.LoginActivity this$0 -> a
-    93:93:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
-    96:96:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
-    99:110:void afterTextChanged(android.text.Editable) -> afterTextChanged
+    106:106:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    109:109:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    112:123:void afterTextChanged(android.text.Editable) -> afterTextChanged
 com.djk_shop.MobileAppInfoActivity -> com.djk_shop.MobileAppInfoActivity:
     android.widget.TextView mobileAppText -> a
     23:73:void onCreate(android.os.Bundle) -> onCreate

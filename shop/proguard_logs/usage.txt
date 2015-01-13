@@ -1,4 +1,8 @@
 com.djk_shop.BuildConfig
+com.djk_shop.LoginActivity:
+    private static final java.lang.String LOGIN_INFO
+    private static final java.lang.String USER_NAME_INFO
+    private static final java.lang.String PASSWORD_INFO
 com.djk_shop.MyApplication:
     38:39:public void setData(java.util.Map)
     42:42:public java.util.Map getCache()
