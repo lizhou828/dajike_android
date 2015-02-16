@@ -6,7 +6,7 @@ package com.djk_shop.utils;
 public class StringUtils {
 
     public static boolean isNotBlank(String string) {
-        if( string != null && !"".equals(string) && string.length() > 0 ){
+        if( string != null && !"".equals(string) && string.length() > 0 && !"null".equalsIgnoreCase(string) ){
             return true;
         }else{
             return false;

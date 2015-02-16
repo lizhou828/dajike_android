@@ -11,6 +11,8 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.djk_shop.view.SlideShowView;
+
 /**
  * Created by Administrator on 2014/12/29.
  */
@@ -40,7 +42,7 @@ public class PortalActivity extends TabActivity implements CompoundButton.OnChec
         msg += ",user_name="+username;
         Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
 
-        this.mAIntent = new Intent(this,AActivity.class);
+        this.mAIntent = new Intent(this,IndexActivity.class);
         this.mBIntent = new Intent(this,BActivity.class);
         this.mCIntent = new Intent(this,CActivity.class);
         this.mDIntent = new Intent(this,UserCenterActivity.class);
